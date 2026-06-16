@@ -112,6 +112,12 @@ const modifiers = {
 };
 
 export default [
+    // Math-mode bypasses to block Obsidian auto-pairing conflicts
+    {trigger: /(?<!')'/, replacement: "'", options: "rmA"},
+    {trigger: /(?<!\*)\*/, replacement: "*", options: "rmA"},
+    {trigger: /(?<!`)`/, replacement: "`", options: "rmA"},
+    {trigger: /(?<!")"/, replacement: "\"", options: "rmA"},
+
     // Math mode entry triggers
     {trigger: "mk", replacement: "$$0$", options: "tA"},
     {trigger: "dm", replacement: "$$\n\t$0\n$$", options: "tAw"},
