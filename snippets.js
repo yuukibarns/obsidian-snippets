@@ -122,7 +122,7 @@ export default [
 
     // Math mode entry triggers
     {trigger: "mk", replacement: "$$0$", options: "tA"},
-    {trigger: "dm", replacement: "$$\n\t$0\n$$", options: "tAw"},
+    {trigger: "dm", replacement: "$$ $0 $$", options: "tAw"},
     {trigger: /(?<=\S.*)dm/, replacement: "\n$$\n\t$0\n$$", options: "tAw", priority: 1},
 
     // Default Superscripts & Subscripts
